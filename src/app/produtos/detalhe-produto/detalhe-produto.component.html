@@ -1,0 +1,37 @@
+<section class="product__container">
+    <div class="product-image__container">
+        <img [src]="produto?.imagem" alt="">
+    </div>
+    <div class="product-description__container">
+        <h2 class="product__name">{{ produto?.descricao }}</h2>
+        <h3 class="product__price">{{ produto?.preco | currency:"BRL" }}</h3>
+        <h3 class="product__price">Compra mínima: 10 rifas</h3>
+        <p>
+            MOTO CG ZERO KM 2023 ou R$ 15.000,00 na conta! 08/04- 28º edição
+
+            LICENÇA INTERNACIONAL DE SORTEIOS: N° 4062001118327
+
+            MOTO ZERO!!!
+
+            cota mais BARATA DO BRASIL R$ 0,29
+
+            compra mínima: R$ 7,25 ( 25 números).
+
+            Atendimento WhatsApp: 81- 9 9407 7020.
+
+            O BILHETE NÃO PAGO SERÁ LIBERADO EM 30 MINUTOS!
+
+            Sorteio: Sábado, 08/04 -Lot Federal 19h.
+
+        </p>
+        <label>
+            Quantidade:
+            <input type="number" [(ngModel)]="quantidade" min="1">
+            unidades(s)
+        </label>
+        <p class="product__availability">
+            {{produto?.quantidadeEstoque}} unidade(s) disponíveis
+        </p>
+        <button (click)="adicionarAoCarrinho()">Adicionar ao carrinho</button>
+    </div>
+</section>
